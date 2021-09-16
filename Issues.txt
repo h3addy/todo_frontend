@@ -1,0 +1,1 @@
+1. If input field text is selected using mouse and cleared using backspace, onChange event is not triggered.

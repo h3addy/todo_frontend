@@ -1,0 +1,11 @@
+.footerClass {
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom right, rgb(140, 109, 224), rgb(180, 153, 202));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

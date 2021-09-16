@@ -1,0 +1,46 @@
+.bodyWrapper{
+    display: grid;
+    width: 100vw;
+    height: 90vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: ". . ."
+    ". content ."
+    ". . .";
+}
+
+.todoDescription{
+    grid-area: content;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 25px 0 25px 0; */
+    padding: 10px;
+}
+
+.todoText{
+    width: 50%;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.todoImageContainer {
+    /* background: url('../todo.jpg'); */
+    /* width: 100%; */
+    height: auto;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px) {
+    .todoDescription {
+        /* flex-direction: column; */
+        flex-direction: column-reverse;
+    }
+    .todoText {
+        width: 100%;
+        line-height: 2rem;
+        letter-spacing: 0.1rem;
+    }
+
+}

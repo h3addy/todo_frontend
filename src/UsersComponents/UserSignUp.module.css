@@ -1,0 +1,58 @@
+.signupWrapper {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    /* gap: 1rem; */
+    margin: 1rem;
+}
+
+p {
+    margin: 0 auto;
+}
+
+.signupFormClass {
+    margin: 5rem auto;
+    padding: 30px 5px;
+    width: 60vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+label {
+    font-weight: 700;
+}
+
+input {
+    margin-bottom: 0.5rem;
+    height: 2rem;
+    /* width: 5rem; */
+}
+
+button {
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+}
+
+.signupFormClass a {
+    text-decoration: none;
+    color: black;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.signupFormClass a:hover{
+    color: black;
+}
+
+.signupFormClass a:hover::after{
+    content: '';
+    display: block;
+    background-color: black;
+    padding: 0.5px;
+}
+

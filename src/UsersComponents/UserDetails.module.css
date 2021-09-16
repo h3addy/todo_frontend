@@ -1,0 +1,79 @@
+.userdetailsWrapper {
+    display: grid;
+    width: 100vw;
+    height: 90vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: ". . ."
+    ". content ."
+    ". . .";
+}
+
+p {
+    margin: 0 auto;
+}
+
+.userdetailsFormClass {
+    grid-area: content;
+    margin: 0 auto;
+    padding: 30px 5px;
+    width: 400px;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom right, rgb(163, 137, 235), rgb(96, 38, 145));
+}
+
+.userdetailsFormClass label {
+    font-weight: 700;
+}
+
+.userdetailsFormClass input {
+    margin-bottom: 0.5rem;
+    /* height: 50px; */
+    padding: 20px 5px;
+    width: 15rem;
+}
+
+.userdetailsFormClass input:hover{
+    box-shadow: -1px 5px 5px 0.1px rgba(255, 255, 255, 0.8);
+}
+
+.userdetailsFormClass a:hover::after{
+    content: '';
+    display: block;
+    padding: 2px;
+    background-color: black;
+
+}
+
+.userdetailsFormClass button {
+    margin: 0.5rem 0;
+    height: 2rem;
+    width: 5rem;
+    background: #fff;
+    border: none;
+    border-radius: 25% 0 25% 0;
+    cursor: pointer;
+}
+
+.userdetailsFormClass button:hover{
+    box-shadow: 1px 0px 3px rgba(255, 255, 255, 0.8);
+}
+
+@media only screen and (max-width: 900px) {
+    .userdetailsFormClass {
+        width: 300px;
+    }
+    .userdetailsFormClass input {
+        margin-bottom: 0.5rem;
+        /* height: 50px; */
+        padding: 2px 5px;
+        width: 15rem;
+    }
+    .userdetailsFormClass button {
+        padding: 2px 5px;
+    }
+}
