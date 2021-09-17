@@ -4,9 +4,7 @@ import MainComponent from './BasicComponents/MainComponent'
 
 function App() {
   return (
-    <>
     <MainComponent></MainComponent>
-    </>
   );
 }
 

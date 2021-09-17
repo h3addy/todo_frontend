@@ -10,14 +10,15 @@ import ToDoList from '../ToDoComponents/ToDoList';
 import ToDoAdd from '../ToDoComponents/ToDoAdd';
 import ToDoTaskDetail from '../ToDoComponents/ToDoDetail';
 import UserLogout from '../UsersComponents/UserLogout';
-import Navbar from './NavbarComponent';
-import Footer from './FooterComponent';
+import Navbar from './NavbarComponent'
+import Footer from './FooterComponent'
 
 
 const MainComponent = () => {
     return (
         <>
         <Navbar>ToDo</Navbar>
+        <Footer></Footer>
         <Router>
             <Switch>
                 {/* User Routes */}
@@ -34,7 +35,6 @@ const MainComponent = () => {
                 <Route path="*" component={ErrorsPage} />
             </Switch>
         </Router>
-        <Footer></Footer>
         </>
     )
 }

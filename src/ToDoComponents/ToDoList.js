@@ -1,11 +1,26 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
+import "bootstrap/dist/css/bootstrap.min.css"
+import DeleteConfirmation from "../BasicComponents/DeleteConfirmation.modal"
 import styles from './ToDoList.module.css'
+
 
 const ToDoList = (props) => {
     const [taskList, setTaskList] = useState([])
     // const [taskStatus, setTaskStatus] = useState()
+    const [displayConfirmationModal, setDisplayConfirmationModal] = useState(false);
+    const [deleteMessage, setDeleteMessage] = useState(null);
+
+    const showDeleteModal = () => {
+        setDeleteMessage(`Are you sure you want to delete all the tasks?`);
+        setDisplayConfirmationModal(true);
+    }
+    
+    // Hide the modal
+    const hideConfirmationModal = () => {
+        setDisplayConfirmationModal(false);
+    }
 
     useEffect(() => {
         let active = true
@@ -32,6 +47,7 @@ const ToDoList = (props) => {
         }
     }, [props.history])
 
+
     const deleteAll = () => {
         const userID = JSON.parse(localStorage.getItem('user')).id
         const accessToken = JSON.parse(localStorage.getItem('user')).accessToken
@@ -43,6 +59,8 @@ const ToDoList = (props) => {
                 })
                 .then(response => setTaskList([]))
                 .catch(error => console.log(error))
+        // console.log(userID, accessToken)
+        hideConfirmationModal()
     }
     
     
@@ -50,8 +68,12 @@ const ToDoList = (props) => {
         <div className={styles.todoListWrapper}>
             <div className={styles.topDiv}>
                 <Link to='/user-tasks/add'>Add Task</Link>
-                <h1>Your Tasks</h1>
-                <button onClick={deleteAll}>Delete All</button>
+                {taskList.length !== 0 && 
+                <>
+                    <h1>Your Tasks</h1>
+                    <button onClick={showDeleteModal}>Delete All</button> 
+                </> }
+                <DeleteConfirmation showModal={displayConfirmationModal} confirmModal={deleteAll} hideModal={hideConfirmationModal} message={deleteMessage} />
             </div>
             {taskList.length !== 0 ? <AllTaskList taskList={taskList}></AllTaskList> : <NoTask />}
         </div>

@@ -143,3 +143,12 @@
 }
 
 
+@media only screen and (max-width: 1200px) {
+    .topDiv h1 {
+        font-size: 1.3rem;
+    }
+    .topDiv a, .topDiv button {
+        font-size: 0.8rem;
+        text-decoration: underline;
+    }
+}

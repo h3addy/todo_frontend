@@ -1,9 +1,9 @@
 .classNavBar {
     /* display: grid;
     grid-template-columns: 1fr 1fr; */
-    /* position: fixed;
+    position: sticky;
     top: 0;
-    left: 0; */
+    left: 0;
     width: 100vw;
     padding: 1rem 1rem;
     display: flex;

@@ -11,7 +11,7 @@ const ToDoAdd = (props) => {
 
     return (
         <div>
-            <ToDoForm taskToUpdate={taskDetails} buttonType="add"></ToDoForm>
+            <ToDoForm taskToUpdate={taskDetails} buttonType="add" history={props.history}></ToDoForm>
         </div>
     )
 }

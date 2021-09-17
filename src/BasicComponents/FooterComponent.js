@@ -5,7 +5,7 @@ import styles from './FooterComponent.module.css'
 const Footer = () => {
     return (
         <div className={styles.footerClass}>
-            Github Repo <a href="https://www.github.com" target="_blank" rel="noreferrer"><GithubIcon /></a>
+            <a href="https://github.com/h3addy" target="_blank" rel="noreferrer">Github Repo <GithubIcon /></a>
         </div>
     )
 }
