@@ -26,5 +26,5 @@ All \* marked functionalities requires user to be logged in as user can only per
 
 ### Working
 
-All the above functions make API request to the _ToDo Backend API_ to perform CRUD opertaions.
+All the above functions make API request to the _ToDo Backend API_ to perform CRUD opertaions.<br />
 Visit the _ToDO Backend API_ to understand the working of API calls.
