@@ -6,7 +6,7 @@ Hsoted at: https://your-only-todo.herokuapp.com/
 
 ## ToDo Backend API
 
-Hosted at: https://api-daily-todo-backend.herokuapp.com/
+Hosted at: https://api-daily-todo-backend.herokuapp.com/ <br />
 Github: https://github.com/h3addy/todo_backend
 
 ### Functionalities
