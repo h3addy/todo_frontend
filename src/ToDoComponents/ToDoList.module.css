@@ -107,7 +107,11 @@
 .taskCard .updateDate{
     grid-area: update_date;
     padding: 0.3rem 0.2rem;
-    color: rgba(19, 17, 17, 0.7);
+    color: rgb(19, 17, 17);
+    
+}
+.taskCard .updateDate h6{
+    font-size: 0.7rem;
 }
 
 .taskCard .taskDesc{
@@ -135,11 +139,13 @@
 .statusGreen h4,
 .statusRed h4 {
     grid-area: status;
+    font-size: 0.9rem;
 }
 
 .statusGreen h5,
 .statusRed h5 {
     grid-area: complete_date;
+    font-size: 0.7rem;
 }
 
 
