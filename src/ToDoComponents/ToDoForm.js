@@ -33,6 +33,9 @@ const ToDoForm = ({ taskToUpdate, buttonType, history }) => {
 
     useEffect(() => {
         // console.log(active.current)
+        if (localStorage.length === 0){
+            history.push('/login')
+        }
         if (active.current){
             setTaskDetails({...taskToUpdate.taskk})
         }
